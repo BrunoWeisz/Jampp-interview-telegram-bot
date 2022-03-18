@@ -1,0 +1,82 @@
+1647644067552	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.Yga6XM36YXDZ"
+*** You are running in headless mode.
+1647644068757	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile.Yga6XM36YXDZ/search.json.mozlz4", (void 0)))
+1647644070269	Marionette	INFO	Listening on port 43761
+1647644070385	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1647644072544	Marionette	INFO	Stopped listening on port 43761
+1647644117361	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.k5fhNHus1hpU"
+*** You are running in headless mode.
+1647644117747	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile.k5fhNHus1hpU/search.json.mozlz4", (void 0)))
+1647644118889	Marionette	INFO	Listening on port 36875
+1647644118982	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1647644121108	Marionette	INFO	Stopped listening on port 36875
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1647644219569	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.8WSHaJ18VkJh"
+*** You are running in headless mode.
+1647644219967	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile.8WSHaJ18VkJh/search.json.mozlz4", (void 0)))
+1647644221106	Marionette	INFO	Listening on port 45275
+1647644221189	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1647644223330	Marionette	INFO	Stopped listening on port 45275
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1647644460448	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.jUOxmpvQEVTL"
+*** You are running in headless mode.
+1647644460912	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile.jUOxmpvQEVTL/search.json.mozlz4", (void 0)))
+1647644462055	Marionette	INFO	Listening on port 41971
+1647644462198	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1647644464255	Marionette	INFO	Stopped listening on port 41971
+1647644532336	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.oAjLy6K7Qr5T"
+*** You are running in headless mode.
+1647644532791	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile.oAjLy6K7Qr5T/search.json.mozlz4", (void 0)))
+1647644533918	Marionette	INFO	Listening on port 38475
+1647644533960	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1647644536054	Marionette	INFO	Stopped listening on port 38475
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1647644593233	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.WBYkGLC1jMut"
+*** You are running in headless mode.
+1647644593683	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile.WBYkGLC1jMut/search.json.mozlz4", (void 0)))
+1647644594824	Marionette	INFO	Listening on port 33897
+1647644594859	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1647644596947	Marionette	INFO	Stopped listening on port 33897
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1647644647473	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.QIBQEulvCIXn"
+*** You are running in headless mode.
+1647644647923	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile.QIBQEulvCIXn/search.json.mozlz4", (void 0)))
+1647644649026	Marionette	INFO	Listening on port 38945
+1647644649092	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1647644651221	Marionette	INFO	Stopped listening on port 38945
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1647644824506	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.cZTp7iX5STba"
+*** You are running in headless mode.
+1647644824865	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile.cZTp7iX5STba/search.json.mozlz4", (void 0)))
+1647644825975	Marionette	INFO	Listening on port 41663
+1647644826025	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1647644828160	Marionette	INFO	Stopped listening on port 41663
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+

@@ -1,0 +1,16 @@
+Parte 1
+
+1) Usar la API de telegram para obtener la ubicacion del usuario. -----
+2) Usar la base de datos de https://data.buenosaires.gob.ar/dataset/cajeros-automaticos 
+3) Hay que transformar distancia en coordenadas a distancia en metros
+4) La busqueda debe ser mejor que lineal en el caso promedio
+
+idea de implementacion:
+.) Separar el dataset segun banco, no tiene sentido tenerlos juntos
+.) En la inicializacion del bot, pasar los datos de los bancos a un kd-tree
+
+
+
+Updater --> fetches new updates from telegram and passes them to the Dispatcher class
+Dispatcher --> Allows you to register handlers and deliver the updates to a callback function
+

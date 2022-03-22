@@ -27,38 +27,46 @@ class ATMBotNotifier:
             text = 'Esta busqueda no es valida')
 
     def showCloseATMs(this, update, context, inRangeATMIndexes, atmData, userPosition):
-        if len(inRangeATMIndexes) == 0:
+
+        currentATMs = list(map(lambda index : atmData[index], inRangeATMIndexes))
+        currentATMs = list(filter(lambda atm : this.hasExtractionsLeft(atm), currentATMs))
+        messagesToSend = list(map(lambda atm : this.atmDisplayString(atm), currentATMs))
+
+        if len(messagesToSend) == 0:
             this.notifyNoATMsNearby(update, context)
-        else:
-            currentATMs = []
-            for index in inRangeATMIndexes:
-                currentATMs.append(atmData[index])
-                print(atmData[index])
-            
-            messages = []
-            for atm in currentATMs:
-                if (float(atm[len(atm)-1]) >= 1):
-                    messages.append('Nombre del banco: ' + atm[3] + 
-                                    '\nDireccion: ' + atm[5] +
-                                    '\nExtracciones restantes: ' + atm[len(atm)-1])
+            return
 
-            context.bot.send_message(
-                chat_id = update.effective_chat.id,
-                text = '\n\n'.join(messages))
+        context.bot.send_message(
+            chat_id = update.effective_chat.id,
+            text = '\n\n'.join(messagesToSend))
 
-            pathToMap = PointMapGenerator().generateMap(
-                                                    userPosition,
-                                                    map(
-                                                        lambda data : [data[2],data[1]],
-                                                        currentATMs
-                                                    ))
+        this.sendPositionalMap(userPosition, currentATMs, update, context)
+   
 
-            this.sendImage(update, context, pathToMap)
+#Private
+
+    def hasExtractionsLeft(this, anATM):
+        return float(anATM[len(anATM)-1]) >= 1
+
+    def atmDisplayString(this, anATM):
+        return 'Nombre del banco: ' + anATM[3] + '\nDireccion: ' + anATM[5] + '\nExtracciones restantes: ' + anATM[len(anATM)-1]
 
     def notifyNoATMsNearby(this, update, context):
         context.bot.send_message(
             chat_id = update.effective_chat.id,
             text = "No existen cajeros automaticos de la red seleccionada a menos de 500 metros de su ubicacion")
+
+#Map sending
+
+    def sendPositionalMap(this, userPosition, currentATMs, update, context):
+        pathToMap = PointMapGenerator().generateMap(
+                                                userPosition,
+                                                map(
+                                                    lambda data : [data[2],data[1]],
+                                                    currentATMs
+                                                ))
+
+        this.sendImage(update, context, pathToMap)
 
     def sendImage(this, update, context, path):
         context.bot.send_photo(

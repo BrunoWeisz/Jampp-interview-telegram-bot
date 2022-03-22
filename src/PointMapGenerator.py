@@ -23,4 +23,4 @@ class PointMapGenerator:
         img.save(pathToImage)
         return pathToImage
 
-        # newMap.save("map.html")
+       

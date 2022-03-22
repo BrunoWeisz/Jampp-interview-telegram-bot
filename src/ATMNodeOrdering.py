@@ -1,17 +1,12 @@
-import numpy as np
 from scipy.spatial import KDTree
 from src.CoordinatesConverter import CoordinatesToMeters
 
 class ATMNodeOrdering:
     def __init__(this, csvReader):
         this.atmData = csvReader.retrieveInformation()
-        this.atmPositions = []
-
-        for row in this.atmData: #emprolijar
-            if not row[1] == 'long':
-                this.atmPositions.append([float(row[1]), float(row[2])])
-
+        this.atmPositions = list(map(lambda row : [float(row[1]), float(row[2])], this.atmData[1:-1]))
         this.atmPositionKDTree = KDTree(this.atmPositions)
+        
 
     def closestNodes(this, long, lat):
         d, index = this.atmPositionKDTree.query(x = [long,lat], k = 3)

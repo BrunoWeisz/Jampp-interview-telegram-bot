@@ -1,0 +1,6 @@
+telegram
+python-telegram-bot
+scipy
+geopy
+folium
+pillow

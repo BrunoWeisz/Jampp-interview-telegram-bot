@@ -7,9 +7,7 @@ class CSVWriter:
     
     def write(this,dataToWrite):
         with open(this.path, 'w') as fileToModify:
-        
-            writer = csv.writer(fileToModify, delimiter = '#')
-            
+            writer = csv.writer(fileToModify, delimiter = '#')  
             for row in dataToWrite:
                 writer.writerow(row)
 

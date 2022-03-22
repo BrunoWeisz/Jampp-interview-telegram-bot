@@ -1,4 +1,4 @@
-from ATMNodeOrdering import ATMNodeOrdering
+from src.ATMNodeOrdering import ATMNodeOrdering
 
 class SearchEngine:
     def __init__(this, aBot):
@@ -33,4 +33,5 @@ class ValidSearchEngine(SearchEngine):
         this.bot.deploySearchForValidSearch(update, context, this)
         
     def validATMs(this, long, lat):
-        return this.nodeOrdering.closestNodes(long, lat)
+        inRangeATMIndexes, atmData = this.nodeOrdering.closestNodes(long, lat)
+        return inRangeATMIndexes, atmData

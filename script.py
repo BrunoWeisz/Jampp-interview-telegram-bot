@@ -1,5 +1,3 @@
-from ATMBot import ATMBot 
-
-
+from src.ATMBot import ATMBot 
 
 bot = ATMBot()

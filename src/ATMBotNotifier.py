@@ -1,4 +1,5 @@
 from telegram import KeyboardButton, ReplyKeyboardMarkup
+from src.PointMapGenerator import PointMapGenerator
 
 class ATMBotNotifier:
 
@@ -25,17 +26,34 @@ class ATMBotNotifier:
             chat_id = update.effective_chat.id,
             text = 'Esta busqueda no es valida')
 
-    def showCloseATMs(this, update, context, atmDataList):
-        if len(atmDataList) == 0:
+    def showCloseATMs(this, update, context, inRangeATMIndexes, atmData, userPosition):
+        if len(inRangeATMIndexes) == 0:
             this.notifyNoATMsNearby(update, context)
         else:
-            messages = []
-            for atm in atmDataList:
-                messages.append('Nombre del banco: ' + atm[0] + '\nDireccion: ' + atm[1])
+            currentATMs = []
+            for index in inRangeATMIndexes:
+                currentATMs.append(atmData[index])
+                print(atmData[index])
             
+            messages = []
+            for atm in currentATMs:
+                if (float(atm[len(atm)-1]) >= 1):
+                    messages.append('Nombre del banco: ' + atm[3] + 
+                                    '\nDireccion: ' + atm[5] +
+                                    '\nExtracciones restantes: ' + atm[len(atm)-1])
+
             context.bot.send_message(
                 chat_id = update.effective_chat.id,
                 text = '\n\n'.join(messages))
+
+            pathToMap = PointMapGenerator().generateMap(
+                                                    userPosition,
+                                                    map(
+                                                        lambda data : [data[2],data[1]],
+                                                        currentATMs
+                                                    ))
+
+            this.sendImage(update, context, pathToMap)
 
     def notifyNoATMsNearby(this, update, context):
         context.bot.send_message(

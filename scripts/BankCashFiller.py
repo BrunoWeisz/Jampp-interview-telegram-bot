@@ -14,5 +14,5 @@ with open('../files/cajeros-automaticos.csv', 'r') as csvWithoutCash:
                 row.append('extracciones')
                 writer.writerow(row)
             else:
-                row.append(100)
+                row.append(3)
                 writer.writerow(row)
